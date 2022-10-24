@@ -7,13 +7,14 @@ let gameOutcomeTie = false;
 
 
 function getComputerChoice() {
-    const randomNum = Math.floor(Math.floor(Math.random() * 3))
-    if (randomNum === 0) {
-        computerSelection = "rock";
-    } else if (randomNum === 1) {
-        computerSelection = "paper";
-    } else {
-        computerSelection = "scissors";
+    const randomNum = Math.floor(Math.random() * 3)
+    switch (randomNum) {
+        case 0:
+            return "rock";
+        case 1:
+            return "paper";
+        case 2:
+            return "scissors";
     }
 }
 
@@ -52,8 +53,8 @@ function playRound(playerSelection, computerSelection) {
 
 function game() {
     for (let i = 0; i < 5; i) {
-        playerSelection = prompt("Enter a hand: (Rock, Paper, Scissors:");
-        getComputerChoice();
+        playerSelection = prompt("Enter a hand: (Rock, Paper, Scissors:").toLowerCase();
+        computerSelection = getComputerChoice();
         console.log(playRound(playerSelection, computerSelection));
         if (gameOutcomeTie) {
             gameOutcomeTie = false;
