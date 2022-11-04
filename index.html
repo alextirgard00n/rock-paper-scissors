@@ -6,41 +6,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <link rel="icon" href="kiiroitori.png">
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
-    <!-- <div> -->
     <header class="header">
         <h1 class="title">Rock Paper Scissors</h1>
     </header>
 
     <div class="result">
-        <h2 class="scoreInfo">You won!</h2>
-        <h3 class="scoreMessage">This beats that etc</h3>
+        <h2 class="scoreInfo">Choose your Weapon</h2>
+        <h3 class="scoreMessage">First to score 5 points wins the game</h3>
     </div>
 
     <div class="scoresContainer">
         <div class="scoreBox">
-            <div class="playerSign">✌</div>
+            <div class="playerSign">✊</div>
             <div class="playerScore">Player: 0</div>
         </div>
         <div class="scoreBox">
-            <div class="computerSign">✋</div>
+            <div class="computerSign">✊</div>
             <div class="computerScore">Computer: 0</div>
         </div>
     </div>
 
     <div class="buttonsContainer">
-        <button class="rockBtn btnBox">✊</button>
-        <button class="paperBtn btnBox">✋</button>
-        <button class="scissorsBtn btnBox">✌</button>
+        <button class="rock" id="btn">✊</button>
+        <button class="paper" id="btn">✋</button>
+        <button class="scissors" id="btn">✌</button>
     </div>
 
+    <!-- ✊✋✌ -->
+
     <footer class="footer">Copyright @ 2022 alextirgard00n</footer>
-    <!-- </div> -->
-    <!-- ✊ -->
     <script src="app.js"></script>
 </body>
 

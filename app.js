@@ -1,10 +1,16 @@
 
 let playerSelection;
-let computerSelection;;
+let computerSelection;
 let playerGameCount = 0;
 let computerGameCount = 0;
 let gameOutcomeTie = false;
 
+const btn = document.querySelectorAll('#btn');
+btn.forEach(btn => btn.addEventListener('click', buttonClick));
+
+function buttonClick() {
+    playGame(this.classList.value);
+}
 
 function getComputerChoice() {
     const randomNum = Math.floor(Math.random() * 3)
@@ -51,20 +57,39 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-function game() {
-    for (let i = 0; i < 5; i) {
-        playerSelection = prompt("Enter a hand: (Rock, Paper, Scissors:").toLowerCase();
-        computerSelection = getComputerChoice();
-        console.log(playRound(playerSelection, computerSelection));
-        if (gameOutcomeTie) {
-            gameOutcomeTie = false;
-        } else {
-            i++;
-        }
-        console.log(`Player: ${playerSelection} || Computer: ${computerSelection}`)
-        console.log(`Player: ${playerGameCount}`);
-        console.log(`Computer: ${computerGameCount}`);
-    }
+function playGame(playerchoice) {
+
+    // for (let i = 0; i < 5; i) {
+    playerSelection = playerchoice;
+    computerSelection = getComputerChoice();
+    console.log(playRound(playerSelection, computerSelection));
+    // if (gameOutcomeTie) {
+    //     gameOutcomeTie = false;
+    // } else {
+    //     i++;
+    // }
+    console.log(`Player: ${playerSelection} || Computer: ${computerSelection}`)
+    console.log(`Player: ${playerGameCount}   ||   Computer: ${computerGameCount}`);
+    // console.log(`Computer: ${computerGameCount}`);
+    // }
 }
 
+// function game() {
+
+
+//     for (let i = 0; i < 5; i) {
+//         playerSelection = prompt("Enter a hand: (Rock, Paper, Scissors:").toLowerCase();
+//         playerSelection = playerchoice;
+//         computerSelection = getComputerChoice();
+//         console.log(playRound(playerSelection, computerSelection));
+//         if (gameOutcomeTie) {
+//             gameOutcomeTie = false;
+//         } else {
+//             i++;
+//         }
+//         console.log(`Player: ${playerSelection} || Computer: ${computerSelection}`)
+//         console.log(`Player: ${playerGameCount}`);
+//         console.log(`Computer: ${computerGameCount}`);
+//     }
+// }
 // game();
