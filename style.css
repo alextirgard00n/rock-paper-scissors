@@ -53,26 +53,11 @@ h1 {
     height: 130px;
 }
 
-/* same as below */
-/* .playerSign,
-.computerSign {
-    font-size: 70px;
-    align-self: center;
-    padding-bottom: 25px;
-} */
-
 .scoreBox div:nth-child(1) {
     font-size: 70px;
     align-self: center;
     padding-bottom: 25px;
 }
-
-/* same as below */
-/* .playerScore,
-.computerScore {
-    font-size: 20px;
-    font-weight: 600;
-} */
 
 .scoreBox div:nth-child(2) {
     font-size: 20px;
@@ -86,7 +71,7 @@ h1 {
     padding: 40px 0;
 }
 
-button {
+#btn {
     font-size: 70px;
     border-radius: 15px;
     padding: 30px 40px;
@@ -94,7 +79,7 @@ button {
     border: none;
 }
 
-button:hover {
+#btn:hover {
     background-color: rgba(221, 221, 221, 0.25);
     cursor: pointer;
     transition: 1s;
@@ -107,4 +92,36 @@ button:hover {
     align-items: center;
     justify-content: center;
     font-size: 18px;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    h3 {
+        font-size: 15px;
+    }
+
+    .scoreBox div:nth-child(1) {
+        font-size: 50px;
+    }
+
+    .scoreBox div:nth-child(2) {
+        font-size: 15px;
+    }
+
+    .buttonsContainer {
+        gap: 30px;
+    }
+
+    #btn {
+        font-size: 40px;
+        padding: 15px 25px;
+
+    }
 }
