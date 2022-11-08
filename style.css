@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Raleway:wght@800&family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+/* html {
+    font-family: "Twemoji Mozilla",
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji",
+        "EmojiOne Color",
+        "Android Emoji",
+        "sans-serif";
+} */
+
 * {
     margin: 0;
     padding: 0;
