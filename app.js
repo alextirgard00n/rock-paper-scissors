@@ -16,6 +16,9 @@ const resetDiv = document.querySelector('.resetModule');
 const endGameText = document.querySelector('.endGameText')
 const resetBtn = document.querySelector('.resetBtn');
 
+const pinkBtn = document.querySelector('.pink');
+pinkBtn.addEventListener('click', makeTitlePink);
+
 const btn = document.querySelectorAll('#btn');
 btn.forEach(btn => btn.addEventListener('click', buttonClick));
 
@@ -23,6 +26,11 @@ resetBtn.addEventListener('click', restartGame);
 
 function buttonClick() { //handles click from user
     playGame(this.classList.value);
+}
+
+function makeTitlePink() {
+    const title = document.querySelector('.title');
+    title.style.color = 'pink';
 }
 
 function getComputerChoice() {
