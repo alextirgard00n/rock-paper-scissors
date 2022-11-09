@@ -13,7 +13,6 @@ body {
     flex-direction: column;
     font-family: 'Courier New', Courier, monospace;
     color: #ddd;
-    /* min-height: 100vh; */
     height: 100%;
 }
 
@@ -138,7 +137,7 @@ h1 {
 
 
 
-@media (max-width: 550px) {
+@media (max-width: 570px) {
     h1 {
         font-size: 18px;
     }
@@ -153,6 +152,10 @@ h1 {
 
     .scoresContainer {
         padding: 10px;
+    }
+
+    .scoreBox {
+        height: 120px;
     }
 
     .scoreBox div:nth-child(1) {
