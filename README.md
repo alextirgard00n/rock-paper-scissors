@@ -1,4 +1,5 @@
 # rock-paper-scissors
 
-// implemented javascript console based game of rock paper scissors
-// will revist with web based interactive game later on with the course
+- Javascript based rock paper scissors game
+- Clickable selection and dom events manipulated in real time
+- Ability to reset game after first to score 5 points
