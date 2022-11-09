@@ -13,12 +13,13 @@ body {
     flex-direction: column;
     font-family: 'Courier New', Courier, monospace;
     color: #ddd;
-    min-height: 100vh;
-
+    /* min-height: 100vh; */
+    height: 100%;
 }
 
 .content {
-    flex: 1 0 auto;
+    /* flex: 1 0 auto; */
+    flex: 1;
 }
 
 header {
