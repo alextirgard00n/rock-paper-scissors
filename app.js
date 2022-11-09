@@ -5,17 +5,22 @@ let playerScore = 0;
 let computerScore = 0;
 let roundWinner = '';
 
+
 const scoreInfo = document.querySelector('.scoreInfo');
 const scoreMessage = document.querySelector('.scoreMessage');
 const playerSign = document.querySelector('.playerSign');
 const computerSign = document.querySelector('.computerSign');
 const playerScoreMsg = document.querySelector('.playerScore');
 const computerScoreMsg = document.querySelector('.computerScore');
+const resetDiv = document.querySelector('.resetModule');
+const resetBtn = document.querySelector('.resetBtn');
 
 const btn = document.querySelectorAll('#btn');
 btn.forEach(btn => btn.addEventListener('click', buttonClick));
 
-function buttonClick() {
+resetBtn.addEventListener('click', restartGame);
+
+function buttonClick() { //handles click from user
     playGame(this.classList.value);
 }
 
@@ -32,6 +37,12 @@ function getComputerChoice() {
 }
 
 function playGame(playerSelection, computerSelection) {
+    if (isGameOver()) {
+        endGameReset();
+        return;
+    }
+
+
     playerSelection = playerSelection;
     computerSelection = getComputerChoice();
 
@@ -53,6 +64,15 @@ function playGame(playerSelection, computerSelection) {
     updateScore();
     updateScoreMessage(roundWinner, playerSelection, computerSelection)
     updateChoices(playerSelection, computerSelection);
+
+    if (isGameOver()) {
+        endGameReset();
+        return;
+    }
+}
+
+function isGameOver() {
+    return playerScore === 5 || computerScore === 5
 }
 
 function updateChoices(playerSelection, computerSelection) {
@@ -109,4 +129,20 @@ function updateScoreMessage(winner, playerSelection, computerSelection) {
 
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase()
+}
+
+function restartGame() {
+    playerScore = 0
+    computerScore = 0
+    scoreInfo.textContent = 'Choose your Sign'
+    scoreMessage.textContent = 'First to score 5 points wins the game'
+    playerScoreMsg.textContent = 'Player: 0'
+    computerScoreMsg.textContent = 'Computer: 0'
+    playerSign.textContent = '?'
+    computerSign.textContent = '?'
+    resetDiv.style.display = 'none';
+}
+
+function endGameReset() {
+    resetDiv.style.display = 'flex';
 }

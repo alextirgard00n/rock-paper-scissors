@@ -14,12 +14,12 @@
     <header class="header">
         <h1 class="title">Rock Paper Scissors</h1>
     </header>
+
     <div class="content">
         <div class="result">
             <h2 class="scoreInfo">Choose your Sign</h2>
             <h3 class="scoreMessage">First to score 5 points wins the game</h3>
         </div>
-
         <div class="scoresContainer">
             <div class="scoreBox">
                 <div class="playerSign">?</div>
@@ -36,13 +36,21 @@
             <button class="paper" id="btn">✋</button>
             <button class="scissors" id="btn">✌️</button>
         </div>
+
+        <div class="resetModule">
+            <h2 class="resetText">Play Again?</h2>
+            <button class="resetBtn">Reset</button>
+        </div>
     </div>
 
-
-    <!-- ✊✋✌ -->
-
-    <footer class="footer">Copyright @ 2022 alextirgard00n</footer>
+    <footer class="footer">
+        <p>Copyright ©
+            <script>document.write(new Date().getFullYear())</script> alextirgard00n
+        </p>
+        <a href="https://github.com/alextirgard00n" target="_blank"> <i class="fa-brands fa-github"></i></a>
+    </footer>
     <script src="app.js"></script>
+    <script src="https://kit.fontawesome.com/76e985f9f8.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
