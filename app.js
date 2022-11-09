@@ -13,6 +13,7 @@ const computerSign = document.querySelector('.computerSign');
 const playerScoreMsg = document.querySelector('.playerScore');
 const computerScoreMsg = document.querySelector('.computerScore');
 const resetDiv = document.querySelector('.resetModule');
+const endGameText = document.querySelector('.endGameText')
 const resetBtn = document.querySelector('.resetBtn');
 
 const btn = document.querySelectorAll('#btn');
@@ -145,4 +146,9 @@ function restartGame() {
 
 function endGameReset() {
     resetDiv.style.display = 'flex';
+    if (playerScore > computerScore) {
+        endGameText.textContent = 'You won!';
+    } else {
+        endGameText.textContent = 'You Lost!';
+    }
 }

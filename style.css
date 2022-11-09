@@ -91,10 +91,10 @@ h1 {
 }
 
 .resetModule {
-    /* display: flex; */
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    padding-bottom: 30px;
     display: none;
 }
 
@@ -108,14 +108,10 @@ h1 {
 }
 
 .resetBtn:hover {
-    /* background-color: rgba(221, 221, 221, 0.25); */
     background-color: red;
     cursor: pointer;
     transition: .5s;
 }
-
-
-
 
 .footer {
     /* margin-top: auto; */
@@ -143,15 +139,19 @@ h1 {
 
 @media (max-width: 550px) {
     h1 {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     h2 {
-        font-size: 22px;
+        font-size: 24px;
     }
 
     h3 {
-        font-size: 15px;
+        font-size: 17px;
+    }
+
+    .scoresContainer {
+        padding: 10px;
     }
 
     .scoreBox div:nth-child(1) {
@@ -164,6 +164,7 @@ h1 {
 
     .buttonsContainer {
         gap: 10px;
+        padding: 20px;
     }
 
     #btn {
