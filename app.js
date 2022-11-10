@@ -136,7 +136,7 @@ function restartGame() {
     playerScore = 0
     computerScore = 0
     scoreInfo.textContent = 'Choose your Sign'
-    scoreMessage.textContent = 'First to score 5 points wins the game'
+    scoreMessage.textContent = 'First to score 5 wins the game'
     playerScoreMsg.textContent = 'Player: 0'
     computerScoreMsg.textContent = 'Computer: 0'
     playerSign.textContent = '?'
